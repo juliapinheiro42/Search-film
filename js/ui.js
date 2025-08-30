@@ -141,19 +141,6 @@ function renderStars(rating = 0) {
   }
 }
 
-function highlightStars(value) {
-  let stars = document.querySelectorAll("#starRating .star");
-  stars.forEach((s, i) => {
-    let leftHalf = i * 2 + 1;
-    let rightHalf = i * 2 + 2;
-    s.classList.remove("active", "half");
-    if (value >= rightHalf) {
-      s.classList.add("active"); // cheia
-    } else if (value === leftHalf) {
-      s.classList.add("half"); // meia
-    }
-  });
-}
 
 export function saveRating() {
   if (currentMovieIndex !== null) {
