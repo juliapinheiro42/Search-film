@@ -61,14 +61,3 @@ Mostrar o filme de maior duração.
 Clique na estrela ✏️ para adicionar ou alterar sua nota.
 
 Clique em ❌ para remover um filme da lista.
-
-⚙️ Estrutura do Projeto
-/movie-list-app
-│
-├─ index.html # Página principal
-├─ style.css # Estilos customizados (ajustes)
-├─ main.js # Lógica principal do app
-├─ ui.js # Renderização e manipulação do DOM
-├─ api.js # Funções para OMDb e Streaming API
-├─ movie.js # Classe Movie
-└─ README.md # Este arquivo
