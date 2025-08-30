@@ -1,7 +1,6 @@
 import { movies, saveMovies } from "./main.js";
 
 
-let editingIndex = null;
 let currentMovieIndex = null;  
 let currentRating = 0;
 
