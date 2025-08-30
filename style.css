@@ -1,0 +1,94 @@
+body, html{
+  margin: 0;
+  padding: 0;
+}
+.search {
+    position: relative;
+    left: -60px;
+    top: -2px;
+    z-index: 1;
+}
+#titleMovie{
+    border-radius: 50px;
+    padding: 10px 5px;
+    z-index: 0;
+}
+.card-img-top {
+  height: 300px;       
+  object-fit: cover;   
+}
+
+.button button{
+    box-shadow:  #000 2px 1px 2px 0.5px;
+    padding: 5px 16px;
+}
+
+#btnTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #000;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+#btnTop:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.loading {
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.star {
+  width: 32px;
+  height: 32px;
+  fill: #ccc;
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+.star.active {
+  fill: gold;
+}
+
+.star.half {
+  fill: url(#halfGradient);
+}
+
+svg defs {
+  display: none;
+}
+
+.star.half path {
+  fill: linear-gradient(to right, gold 50%, #ccc 50%);
+}
+
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+

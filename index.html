@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Filmes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">🎬 Minha Lista de Filmes</h1>
+    <!-- Formulário de busca -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" id="titleMovie" class="form-control m-1" placeholder="Digite o título do filme">
+          <button class="btn m-1 search" onclick="getMovies()">🔍</button>
+        </div>
+      </div>
+    </div>
+      <!-- Mensagens de feedback -->
+<div id="messages" class="mb-3"></div>
+
+    <!-- Dropdown de filtros -->
+    <div class="dropdown mb-3">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Todos os filmes
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><button class="dropdown-item" onclick="ratingFilter()">Bem avaliados</button></li>
+        <li><button class="dropdown-item" onclick="streamingFilter()">Disponível em streaming</button></li>
+        <li><button class="dropdown-item" onclick="durationFilter()">Filme com maior duração</button></li>
+      </ul>
+    </div>
+
+    <h5 id="mediaIMDB" class="m-2"></h5>
+
+    <div id="loading" class="loading">
+     <div class="spinner"></div>
+     <p>Carregando...</p>
+    </div>
+    <!-- Lista de filmes -->
+    <div id="moviesList" class="d-flex row g-5">
+      
+  </div>
+
+  <!-- Botão de topo -->
+  <button onclick="scrollToTop()" id="btnTop" title="Voltar ao topo">^</button>
+
+<!-- Modal Avaliação -->
+<div class="modal fade" id="ratingModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Avaliar Filme</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-2">Sua nota:</p>
+        <div id="starRating" class="fs-2 text-warning">
+          <div id="starRating" class="d-flex"></div>
+<p id="ratingValue">0/10</p>
+<span id="ratingValue">-</span>
+
+        </div>
+        <p id="ratingValue" class="fw-bold mt-2">-</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="saveRating()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
