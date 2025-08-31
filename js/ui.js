@@ -142,7 +142,7 @@ function renderStars(rating = 0) {
 }
 
 
-export function saveRating() {
+export function updateRating() {
   if (currentMovieIndex !== null) {
     movies[currentMovieIndex].userRating = currentRating;
     saveMovies();
